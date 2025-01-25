@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="shortcut icon" href="./img/weather/cloudy.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <main class="weather">
         <form action="" class="form">
-            <input type="text" class="form__input">
-            <button class="form__btn"></button>
+            <input type="text" class="form__input" placeholder="Enter City">
+            <button class="form__btn">
+                <img src="./img/ui/search.svg" alt="Search">
+            </button>
         </form>
 
-        <img src="./img/weather/nature_cloudy.png" alt="Weather" class="weather">
+        <div class="weather__info none">
+            <img src="./img/weather/nature_cloudy.png" alt="Weather" class="weather__img">
 
-        <div class="weather__temp">22°c</div>
-        <div class="weather__city">Vlora</div>
-
-        <section class="weather__details">
+            <div class="weather__temp">22°c</div>
+            <div class="weather__city">Vlora</div>
+        </div>
+        
+        <section class="weather__details none">
             <section class="details">
                 <img src="./img/ui/humidity.svg" alt="Weather details humidity" class="details__img">
 

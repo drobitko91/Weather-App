@@ -1,1 +1,112 @@
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", serif;
+	background-color: #282828;  
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 10vh;
+    padding-bottom: 30vh;
+}
+
+.weather {
+	width: 320px;
+	padding: 30px 20px;
+
+	border-radius: 16px;
+	background: linear-gradient(97deg, #5fc93da6 4.7%, #11e3c6d4 95.98%), #2173a9b3;
+	color: #fff;
+}
+
+.none {
+    background: none !important;
+}
+
+
+
+/* Form */
+
+form {
+    height: 40px;
+
+    display: flex;
+    align-items: stretch;
+
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+.form__input {
+    color: #000;
+    flex-grow: 1;
+    padding: 0 10px 0 20px;
+}
+
+.form__input::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.form__btn {
+    padding: 0 10PX;
+}
+
+
+/* Weather Info*/
+
+.weather__info {
+    padding-top: 10px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.weather__img {
+    width: 128px;
+    margin: 20px 20px;
+}
+
+.weather__temp {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.weather__city {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+
+/* Weaher details */
+
+.weather__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 36px auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+}
+.details__img {
+    width: 36px;
+    grid-row: 1/3;
+    align-self: center;
+}
+.details__value {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.details__title {
+    font-size: 14px;
+    font-weight: 300;
+}
