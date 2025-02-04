@@ -35,13 +35,14 @@ async function sumbmitHandler(e) {
         humidity: weatherInfo.main.humidity,
         speed: weatherInfo.wind.speed,
         main: weatherInfo.weather[0]['main'],
+        // icon: weatherInfo.weather[0]['icon'],
     };
 
     renderWeatherData(weatherData);
 }
 
 async function getGeo(name) {
-    const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`;
+    const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`;
     const response = await fetch(geoUrl);
     const data = await response.json();
     return data;
@@ -84,4 +85,7 @@ function renderWeatherData(data) {
     } else {
         img.src="./img/ui/earth.png"
     }
+
+        // const iconCode = data.icon;
+        // img.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
